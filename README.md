@@ -18,7 +18,7 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 ![Solidity](https://img.shields.io/badge/Solidity-EVM-black) 
 ![Zig](https://img.shields.io/badge/Zig-0.16-orange) 
 ![AI](https://img.shields.io/badge/AI-Prompt_Engineering-purple)
-<img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/pe.svg" width="25">
+<img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/pe.svg" width="28">
 
 ![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=true)
 ![Trofeos](https://github-profile-trophy.vercel.app/?username=edison-manrique&theme=tokyonight&no-frame=true&margin-w=15)

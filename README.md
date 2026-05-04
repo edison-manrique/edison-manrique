@@ -19,6 +19,6 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 ![Zig](https://img.shields.io/badge/Zig-0.16-orange) 
 ![AI](https://img.shields.io/badge/AI-Prompt_Engineering-purple)
 
-![Mis Stats de GitHub](https://github-readme-stats.vercel.app/api?username=edison-manrique&show_icons=true&theme=tokyonight)
-![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=edison-manrique&layout=compact&theme=tokyonight&hide_border=true)
+![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=true)
+![Trofeos](https://github-profile-trophy.vercel.app/?username=edison-manrique&theme=tokyonight&no-frame=true&margin-w=15)
 

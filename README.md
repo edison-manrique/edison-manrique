@@ -1,8 +1,6 @@
-# ¡Hola! Soy Edi 👋
+# ¡Hola! Soy Edi Manrique 👋
 
-### Blockchain Engineer & AI Orchestrator 🚀
-
-Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especialista en **Web3** (EVM, Solidity, Yul) y enfocado en **Zig/Rust** para soluciones de alto rendimiento. Utilizo la **IA** como mi motor principal para la orquestación de conocimiento y la creación de infraestructura técnica.
+Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especialista en **Web3** y enfocado en **Zig/Rust** para soluciones de alto rendimiento. Utilizo la **IA** como mi motor principal para la orquestación de conocimiento y la creación de infraestructura técnica.
 
 ---
 

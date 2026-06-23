@@ -7,19 +7,16 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 ---
 
 ### 🛠️ Mi Stack & Intereses
-*   **Lenguajes:** Solidity (Yul/Assembly), Zig, Rust, WebAssembly.
-*   **Sistemas:** EVM Internals, Seguridad en Smart Contracts.
+*   **Lenguajes:** Solidity, Zig, Rust, AssemblyScript y TypeScript.
 *   **IA:** Experto en Prompt Engineering y automatización de flujos de trabajo.
-*   **Futuro:** Siguiendo de cerca la computación cuántica y la criptografía post-cuántica.
 
 ---
-
-![Blockchain](https://img.shields.io/badge/Blockchain-Web3-blue) 
-![Solidity](https://img.shields.io/badge/Solidity-EVM-black) 
-![Zig](https://img.shields.io/badge/Zig-0.16-orange) 
-![AI](https://img.shields.io/badge/AI-Prompt_Engineering-purple)
+![Rust](https://img.shields.io/badge/Rust-1.96.0-orange)
+![Zig](https://img.shields.io/badge/Zig-0.16.0-yellow)
+![AssemblyScript](https://img.shields.io/badge/AssemblyScript-0.28.19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-blue)
+![Solidity](https://img.shields.io/badge/Solidity-0.8.35-purple) 
+![AI](https://img.shields.io/badge/AI-Prompt_Engineering-green)
 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/pe.svg" width="28">
 
 ![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=true)
-![Trofeos](https://github-profile-trophy.vercel.app/?username=edison-manrique&theme=tokyonight&no-frame=true&margin-w=15)
-

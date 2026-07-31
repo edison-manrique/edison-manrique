@@ -14,7 +14,7 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 ![AssemblyScript](https://img.shields.io/badge/AssemblyScript-0.28.20-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-blue)
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.36-purple) 
-![AI](https://img.shields.io/badge/AI-Prompt_Engineering-green)
+![AI](https://img.shields.io/badge/AI-Developer-007bff)
 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/pe.svg" width="28">
 
 ![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=true)

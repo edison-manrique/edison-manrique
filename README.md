@@ -6,7 +6,6 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 
 ### 🛠️ Mi Stack & Intereses
 *   **Lenguajes:** Solidity, Zig, Rust, AssemblyScript y TypeScript.
-*   **IA:** Experto en Prompt Engineering y automatización de flujos de trabajo.
 
 ---
 ![Rust](https://img.shields.io/badge/Rust-1.97.1-orange)

@@ -17,4 +17,4 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 
 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/pe.svg" width="28">
 
-![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=true)
+![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=false)

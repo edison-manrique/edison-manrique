@@ -16,5 +16,3 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 ![Qwen](https://img.shields.io/badge/Qwen-3.8-8B5CF6)
 
 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/pe.svg" width="28">
-
-![Mis Estadísticas](https://streak-stats.demolab.com/?user=edison-manrique&theme=tokyonight&hide_border=false)

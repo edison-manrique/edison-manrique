@@ -9,7 +9,7 @@ Apasionado por la arquitectura de sistemas y el desarrollo de bajo nivel. Especi
 
 ---
 ![Rust](https://img.shields.io/badge/Rust-1.98.0-orange)
-![Zig](https://img.shields.io/badge/Zig-0.16.0-yellow)
+![Zig](https://img.shields.io/badge/Zig-0.17.0-yellow)
 ![AssemblyScript](https://img.shields.io/badge/AssemblyScript-0.28.20-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-blue)
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.36-purple)

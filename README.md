@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- HEADER BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:0d1117,30:161b22,70:0052cc,100:00d2ff&height=220&section=header&text=Edi%20Manrique&fontSize=52&fontAlignY=38&desc=Systems%20Architect%20%7C%20Low-Level%20Engineering%20%7C%20Zero-Alloc%20Crypto%20%26%20WASM&descAlignY=62&descSize=19&fontColor=ffffff" width="100%" alt="Edi Manrique Banner" />
+<!-- NATIVE HIGH-PERFORMANCE VECTOR BANNER -->
+<img src="./assets/banner.svg" width="100%" alt="Edi Manrique - Systems Architect" />
 
 <p align="center">
   <a href="https://github.com/edison-manrique">
@@ -59,7 +59,7 @@ const EDI: Engineer = Engineer {
           <img src="https://img.shields.io/badge/Version-v4.0.0-blue?style=flat-square" />
         </a>
       </p>
-      <p>Single-binary, zero-allocation WebAssembly cryptographic engine for Bitcoin & Ethereum wallets. Includes secp256k1, BIP-32/39/44, Schnorr (BIP-340), ECDSA, ECDH, Taproot, MuSig2, WIF, and addresses without any runtime heap allocation or <code>memory.grow</code>.</p>
+      <p>Single-binary, zero-allocation WebAssembly cryptographic engine for Bitcoin & Ethereum wallets. Includes secp256k1, BIP-32/39/44, Schnorr (BIP-340), ECDSA, ECDH, Taproot, WIF, and addresses without any runtime heap allocation or <code>memory.grow</code>.</p>
       <p>🔗 <a href="https://edison-manrique.github.io/blockchain-wasm/"><b>Live Interactive Playground →</b></a></p>
     </td>
     <td width="50%" valign="top">
@@ -153,9 +153,5 @@ const EDI: Engineer = Engineer {
 
 [![GitHub Followers](https://img.shields.io/github/followers/edison-manrique?label=Follow%20%40edison-manrique&style=social)](https://github.com/edison-manrique)
 [![Gmail](https://img.shields.io/badge/Email-edison.manrique.chocce%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:edison.manrique.chocce@gmail.com)
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:00d2ff,50:0052cc,100:0d1117&height=100&section=footer" width="100%" />
 
 </div>

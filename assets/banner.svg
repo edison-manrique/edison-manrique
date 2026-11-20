@@ -1,150 +1,336 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
   <defs>
+    <!-- Base Obsidian Canvas -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080b10"/>
-      <stop offset="50%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#0a1526"/>
+      <stop offset="0%" stop-color="#05070b"/>
+      <stop offset="55%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#071220"/>
     </linearGradient>
 
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0066ff"/>
-      <stop offset="50%" stop-color="#00d2ff"/>
-      <stop offset="100%" stop-color="#7928ca"/>
+    <!-- Atmospheric Spotlights -->
+    <radialGradient id="spotLeft" cx="14%" cy="22%" r="58%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#1d4ed8" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#05070b" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="spotRight" cx="82%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="48%" stop-color="#0284c7" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#05070b" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cffafe" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#22d3ee" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 3D Isometric Cube Face Shading -->
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#082f49" stop-opacity="0.38"/>
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0.58"/>
     </linearGradient>
 
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="70%" stop-color="#e6f4ff"/>
-      <stop offset="100%" stop-color="#00d2ff"/>
+    <!-- Precision Accents -->
+    <linearGradient id="topLaser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#38bdf8" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#3b82f6" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
     </linearGradient>
 
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0052cc" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#00d2ff" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#7928ca" stop-opacity="0.8"/>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.4"/>
     </linearGradient>
 
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
 
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f293d" stroke-width="0.75" stroke-opacity="0.35"/>
-      <circle cx="40" cy="40" r="1" fill="#00d2ff" fill-opacity="0.25"/>
+    <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="traceFadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.42"/>
+    </linearGradient>
+
+    <linearGradient id="traceFadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Precision Grid Pattern with Radial Mask -->
+    <pattern id="techGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.42"/>
+      <circle cx="0" cy="0" r="0.85" fill="#38bdf8" fill-opacity="0.22"/>
     </pattern>
 
-    <style>
+    <radialGradient id="gridMaskGrad" cx="74%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </radialGradient>
+
+    <mask id="gridMask">
+      <rect width="1200" height="320" fill="url(#gridMaskGrad)"/>
+    </mask>
+
+    <clipPath id="cardClip">
+      <rect width="1200" height="320" rx="16"/>
+    </clipPath>
+
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+      .eyebrow {
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+      }
       .title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Outfit', 'Inter', Roboto, sans-serif;
-        font-weight: 800;
-        font-size: 58px;
-        letter-spacing: -1px;
+        font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 60px;
+        letter-spacing: -1.6px;
       }
       .tagline {
-        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
         font-weight: 500;
-        font-size: 20px;
-        letter-spacing: 0.5px;
-        fill: #8b949e;
+        font-size: 17.5px;
+        letter-spacing: -0.1px;
+        fill: #94a3b8;
       }
       .chip-text {
-        font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-        font-size: 13px;
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12px;
         font-weight: 600;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.1px;
       }
-      .highlight {
-        fill: #00d2ff;
-        font-weight: 700;
+      .micro-hud {
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+        fill: #64748b;
       }
-    </style>
+    ]]></style>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="1200" height="320" rx="16" fill="url(#bgGrad)" />
-  <rect width="1200" height="320" rx="16" fill="url(#grid)" />
+  <g clip-path="url(#cardClip)">
+    <!-- Background Layers -->
+    <rect width="1200" height="320" fill="url(#bgGrad)"/>
+    <rect width="1200" height="320" fill="url(#techGrid)" mask="url(#gridMask)"/>
+    <rect width="1200" height="320" fill="url(#spotLeft)"/>
+    <rect width="1200" height="320" fill="url(#spotRight)"/>
 
-  <!-- Ambient Glow Background Blobs -->
-  <circle cx="200" cy="80" r="160" fill="#0052cc" opacity="0.12" filter="url(#glow)"/>
-  <circle cx="1020" cy="220" r="180" fill="#7928ca" opacity="0.10" filter="url(#glow)"/>
-  <circle cx="600" cy="160" r="120" fill="#00d2ff" opacity="0.08" filter="url(#glow)"/>
+    <!-- Top Precision Line -->
+    <rect x="0" y="0" width="1200" height="2" fill="url(#topLaser)"/>
 
-  <!-- Top Decorative Accent Bar -->
-  <rect x="0" y="0" width="1200" height="4" fill="url(#accentGrad)" rx="2"/>
+    <!-- Architectural Registration Marks -->
+    <g stroke="#334155" stroke-width="1" opacity="0.6">
+      <path d="M 18 28 L 18 18 L 28 18" fill="none"/>
+      <path d="M 1182 28 L 1182 18 L 1172 18" fill="none"/>
+      <path d="M 18 292 L 18 302 L 28 302" fill="none"/>
+      <path d="M 1182 292 L 1182 302 L 1172 302" fill="none"/>
+    </g>
 
-  <!-- Tech Status Pulse -->
-  <g transform="translate(60, 52)">
-    <circle cx="0" cy="0" r="5" fill="#00d2ff" opacity="0.4">
-      <animate attributeName="r" values="4;9;4" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0.1;0.8" dur="2.5s" repeatCount="indefinite"/>
+    <!-- Data Circuit Traces + Signal Packets -->
+    <g fill="none" stroke-width="1">
+      <path d="M 730 84 L 832 84 L 862 114 L 905.3 114" stroke="url(#traceFadeLeft)"/>
+      <path d="M 765 236 L 835 236 L 865 206 L 905.3 206" stroke="url(#traceFadeLeft)"/>
+      <path d="M 1064.7 114 L 1122 114 L 1146 90 L 1200 90" stroke="url(#traceFadeRight)"/>
+      <path d="M 1064.7 206 L 1122 206 L 1146 230 L 1200 230" stroke="url(#traceFadeRight)"/>
+
+      <circle cx="832" cy="84" r="2" fill="#22d3ee" opacity="0.55"/>
+      <circle cx="835" cy="236" r="2" fill="#22d3ee" opacity="0.55"/>
+    </g>
+
+    <circle r="2" fill="#67e8f9" opacity="0.9">
+      <animateMotion dur="3.4s" repeatCount="indefinite" path="M 730 84 L 832 84 L 862 114 L 905.3 114"/>
     </circle>
-    <circle cx="0" cy="0" r="4" fill="#00d2ff"/>
-    <text x="16" y="4" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#00d2ff" letter-spacing="1">SYSTEM ARCHITECT // HIGH PERFORMANCE</text>
+    <circle r="2" fill="#38bdf8" opacity="0.85">
+      <animateMotion dur="4.2s" begin="1.2s" repeatCount="indefinite" path="M 1064.7 206 L 1122 206 L 1146 230 L 1200 230"/>
+    </circle>
+
+    <!-- RIGHT CENTERPIECE: 3D Isometric Crypto / WASM Core (cx=985, cy=160) -->
+    <g>
+      <circle cx="985" cy="160" r="130" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 7" opacity="0.7"/>
+      <circle cx="985" cy="160" r="122" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="34 16 6 16" opacity="0.45">
+        <animateTransform attributeName="transform" type="rotate" from="0 985 160" to="360 985 160" dur="65s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Precision Radial Ticks -->
+      <g>
+        <line x1="1098.0" y1="160.0" x2="1107.0" y2="160.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="1100.2" y1="180.3" x2="1105.1" y2="181.2" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1094.9" y1="200.0" x2="1099.6" y2="201.7" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1082.9" y1="216.5" x2="1090.7" y2="221.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="1074.6" y1="235.2" x2="1078.5" y2="238.4" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1060.2" y1="249.6" x2="1063.4" y2="253.5" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1041.5" y1="257.9" x2="1046.0" y2="265.7" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="1025.0" y1="269.9" x2="1026.7" y2="274.6" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1005.3" y1="275.2" x2="1006.2" y2="280.1" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="985.0" y1="273.0" x2="985.0" y2="282.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="964.7" y1="275.2" x2="963.8" y2="280.1" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="945.0" y1="269.9" x2="943.3" y2="274.6" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="928.5" y1="257.9" x2="924.0" y2="265.7" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="909.8" y1="249.6" x2="906.6" y2="253.5" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="895.4" y1="235.2" x2="891.5" y2="238.4" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="887.1" y1="216.5" x2="879.3" y2="221.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="875.1" y1="200.0" x2="870.4" y2="201.7" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="869.8" y1="180.3" x2="864.9" y2="181.2" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="872.0" y1="160.0" x2="863.0" y2="160.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="869.8" y1="139.7" x2="864.9" y2="138.8" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="875.1" y1="120.0" x2="870.4" y2="118.3" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="887.1" y1="103.5" x2="879.3" y2="99.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="895.4" y1="84.8" x2="891.5" y2="81.6" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="909.8" y1="70.4" x2="906.6" y2="66.5" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="928.5" y1="62.1" x2="924.0" y2="54.3" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="945.0" y1="50.1" x2="943.3" y2="45.4" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="964.7" y1="44.8" x2="963.8" y2="39.9" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="985.0" y1="47.0" x2="985.0" y2="38.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="1005.3" y1="44.8" x2="1006.2" y2="39.9" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1025.0" y1="50.1" x2="1026.7" y2="45.4" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1041.5" y1="62.1" x2="1046.0" y2="54.3" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="1060.2" y1="70.4" x2="1063.4" y2="66.5" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1074.6" y1="84.8" x2="1078.5" y2="81.6" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1082.9" y1="103.5" x2="1090.7" y2="99.0" stroke="#38bdf8" stroke-width="1.2" opacity="0.55"/>
+        <line x1="1094.9" y1="120.0" x2="1099.6" y2="118.3" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+        <line x1="1100.2" y1="139.7" x2="1105.1" y2="138.8" stroke="#64748b" stroke-width="0.8" opacity="0.22"/>
+      </g>
+
+      <!-- Back Orbital Ring -->
+      <g transform="rotate(-22 985 160)">
+        <path d="M 851,160 A 134,42 0 0,1 1119,160" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.32"/>
+      </g>
+
+      <!-- Outer Shaded 3D Isometric Cube (R=92) -->
+      <polygon points="985,160 905.3,114.0 985.0,68.0 1064.7,114.0" fill="url(#cubeTop)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.48"/>
+      <polygon points="985,160 985.0,252.0 905.3,206.0 905.3,114.0" fill="url(#cubeLeft)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.36"/>
+      <polygon points="985,160 1064.7,114.0 1064.7,206.0 985.0,252.0" fill="url(#cubeRight)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+
+      <!-- Inner Crystal Isometric Core (R=48) -->
+      <polygon points="985,160 943.4,136.0 985.0,112.0 1026.6,136.0" fill="#22d3ee" fill-opacity="0.24" stroke="#67e8f9" stroke-width="1.1" stroke-opacity="0.72"/>
+      <polygon points="985,160 985.0,208.0 943.4,184.0 943.4,136.0" fill="#0891b2" fill-opacity="0.22" stroke="#22d3ee" stroke-width="1.1" stroke-opacity="0.58"/>
+      <polygon points="985,160 1026.6,136.0 1026.6,184.0 985.0,208.0" fill="#0e7490" fill-opacity="0.3" stroke="#22d3ee" stroke-width="1.1" stroke-opacity="0.52"/>
+
+      <!-- Glowing Core Node -->
+      <circle cx="985" cy="160" r="22" fill="url(#coreGlow)"/>
+      <circle cx="985" cy="160" r="3.8" fill="#ecfeff"/>
+
+      <!-- Front Orbital Ring -->
+      <g transform="rotate(-22 985 160)">
+        <path d="M 1119,160 A 134,42 0 0,1 851,160" fill="none" stroke="#67e8f9" stroke-width="1.3" stroke-opacity="0.68"/>
+        <circle cx="1119" cy="160" r="2.5" fill="#a5f3fc"/>
+        <circle cx="851" cy="160" r="2.5" fill="#38bdf8"/>
+      </g>
+
+      <!-- Outer Vertex Nodes -->
+      <g fill="#67e8f9">
+        <circle cx="985.0" cy="68.0" r="2.2"/>
+        <circle cx="1064.7" cy="114.0" r="2.2"/>
+        <circle cx="1064.7" cy="206.0" r="2.2"/>
+        <circle cx="985.0" cy="252.0" r="2.2"/>
+        <circle cx="905.3" cy="206.0" r="2.2"/>
+        <circle cx="905.3" cy="114.0" r="2.2"/>
+      </g>
+
+      <!-- Architectural Telemetry Labels -->
+      <text x="985" y="24" text-anchor="middle" class="micro-hud" opacity="0.65">NO_STD · DETERMINISTIC</text>
+      <text x="985" y="303" text-anchor="middle" class="micro-hud" opacity="0.65">WASM32 · ZERO-ALLOC</text>
+    </g>
+
+    <!-- LEFT CONTENT AREA -->
+    <!-- Clean Unboxed Eyebrow Kicker -->
+    <g transform="translate(64, 52)">
+      <polygon points="5,0 10,5 5,10 0,5" fill="#22d3ee"/>
+      <text x="20" y="9" class="eyebrow" fill="#38bdf8">SYSTEMS ARCHITECT · LIMA, PERU</text>
+    </g>
+
+    <!-- Main Display Identity Header -->
+    <text x="64" y="128" class="title" fill="url(#titleGrad)">Edi Manrique</text>
+
+    <!-- Crisp Subtitle with Middot Separators -->
+    <text x="64" y="168" class="tagline">
+      <tspan fill="#cbd5e1">Systems Engineering</tspan>
+      <tspan fill="#475569" dx="6">·</tspan>
+      <tspan fill="#38bdf8" dx="6" font-weight="600">Zero-Alloc Cryptography</tspan>
+      <tspan fill="#475569" dx="6">·</tspan>
+      <tspan fill="#e2e8f0" dx="6">WASM &amp; Edge Runtimes</tspan>
+    </text>
+
+    <!-- Hairline Divider -->
+    <rect x="64" y="198" width="676" height="1" fill="url(#dividerGrad)"/>
+
+    <!-- Tech Stack Row with Custom Vector Micro-Icons -->
+    <g transform="translate(64, 224)">
+      <!-- Rust -->
+      <g transform="translate(0, 0)">
+        <rect width="78" height="34" rx="7" fill="#0b111e" stroke="#1e293b" stroke-width="1"/>
+        <polygon points="22.6,17.0 20.7,18.5 21.0,21.0 18.5,20.7 17.0,22.6 15.5,20.7 13.0,21.0 13.3,18.5 11.4,17.0 13.3,15.5 13.0,13.0 15.5,13.3 17.0,11.4 18.5,13.3 21.0,13.0 20.7,15.5"
+                 fill="none" stroke="#dea584" stroke-width="1.2" stroke-linejoin="round"/>
+        <circle cx="17" cy="17" r="1.7" fill="#dea584"/>
+        <text x="31" y="21.5" class="chip-text" fill="#f1b48f">Rust</text>
+      </g>
+
+      <!-- Zig -->
+      <g transform="translate(88, 0)">
+        <rect width="70" height="34" rx="7" fill="#0b111e" stroke="#1e293b" stroke-width="1"/>
+        <path d="M 12.5 13 H 21.5 L 13.5 21 H 21.5" fill="none" stroke="#f7a41d" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/>
+        <text x="31" y="21.5" class="chip-text" fill="#fbbf24">Zig</text>
+      </g>
+
+      <!-- WebAssembly -->
+      <g transform="translate(168, 0)">
+        <rect width="132" height="34" rx="7" fill="#0b111e" stroke="#1e293b" stroke-width="1"/>
+        <path d="M 12 12.5 H 14.8 A 2.2 2.2 0 0 0 19.2 12.5 H 22 V 21.5 H 12 Z" fill="none" stroke="#a78bfa" stroke-width="1.35" stroke-linejoin="round"/>
+        <text x="31" y="21.5" class="chip-text" fill="#c4b5fd">WebAssembly</text>
+      </g>
+
+      <!-- AssemblyScript -->
+      <g transform="translate(310, 0)">
+        <rect width="154" height="34" rx="7" fill="#0b111e" stroke="#1e293b" stroke-width="1"/>
+        <path d="M 14.5 13.5 L 11.5 17 L 14.5 20.5 M 19.5 13.5 L 22.5 17 L 19.5 20.5 M 18 12.5 L 16 21.5"
+              fill="none" stroke="#60a5fa" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="31" y="21.5" class="chip-text" fill="#93c5fd">AssemblyScript</text>
+      </g>
+
+      <!-- Solidity -->
+      <g transform="translate(474, 0)">
+        <rect width="108" height="34" rx="7" fill="#0b111e" stroke="#1e293b" stroke-width="1"/>
+        <polygon points="17,11 21,16.5 17,18.8 13,16.5" fill="#c084fc" fill-opacity="0.88"/>
+        <polygon points="13,18 17,20.2 21,18 17,23" fill="#d8b4fe" fill-opacity="0.72"/>
+        <text x="31" y="21.5" class="chip-text" fill="#e9d5ff">Solidity</text>
+      </g>
+
+      <!-- Zero-Alloc -->
+      <g transform="translate(592, 0)">
+        <rect width="124" height="34" rx="7" fill="#081e30" stroke="#0e7490" stroke-width="1.1"/>
+        <circle cx="17" cy="17" r="4.5" fill="none" stroke="#22d3ee" stroke-width="1.4"/>
+        <line x1="13.5" y1="20.5" x2="20.5" y2="13.5" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round"/>
+        <text x="31" y="21.5" class="chip-text" fill="#67e8f9">Zero-Alloc</text>
+      </g>
+    </g>
   </g>
 
-  <!-- Main Identity Header -->
-  <text x="60" y="132" class="title" fill="url(#textGrad)">Edi Manrique</text>
-
-  <!-- Technical Description / Subtitle -->
-  <text x="60" y="180" class="tagline">
-    Systems Engineering <tspan fill="#30363d">•</tspan> 
-    <tspan fill="#58a6ff">Zero-Alloc Cryptography</tspan> <tspan fill="#30363d">•</tspan> 
-    <tspan fill="#e6edf3">WASM &amp; Edge Runtimes</tspan>
-  </text>
-
-  <!-- High-Tech Tech Chips (Pills) -->
-  <g transform="translate(60, 225)">
-    <!-- Rust -->
-    <g transform="translate(0, 0)">
-      <rect width="105" height="36" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
-      <circle cx="20" cy="18" r="4" fill="#dea584"/>
-      <text x="32" y="23" class="chip-text" fill="#f0883e">Rust</text>
-    </g>
-
-    <!-- Zig -->
-    <g transform="translate(120, 0)">
-      <rect width="90" height="36" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
-      <circle cx="18" cy="18" r="4" fill="#ec915c"/>
-      <text x="30" y="23" class="chip-text" fill="#f39c12">Zig</text>
-    </g>
-
-    <!-- WebAssembly -->
-    <g transform="translate(225, 0)">
-      <rect width="165" height="36" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
-      <circle cx="20" cy="18" r="4" fill="#654ff0"/>
-      <text x="34" y="23" class="chip-text" fill="#a371f7">WebAssembly</text>
-    </g>
-
-    <!-- AssemblyScript -->
-    <g transform="translate(405, 0)">
-      <rect width="180" height="36" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
-      <circle cx="20" cy="18" r="4" fill="#007acc"/>
-      <text x="34" y="23" class="chip-text" fill="#58a6ff">AssemblyScript</text>
-    </g>
-
-    <!-- Solidity -->
-    <g transform="translate(600, 0)">
-      <rect width="125" height="36" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
-      <circle cx="20" cy="18" r="4" fill="#aa67fe"/>
-      <text x="34" y="23" class="chip-text" fill="#bc8cff">Solidity</text>
-    </g>
-
-    <!-- Zero-Alloc -->
-    <g transform="translate(740, 0)">
-      <rect width="145" height="36" rx="8" fill="#0d1f38" stroke="#00d2ff" stroke-width="1.2" stroke-opacity="0.6"/>
-      <circle cx="20" cy="18" r="4" fill="#00d2ff"/>
-      <text x="34" y="23" class="chip-text" fill="#79c0ff">Zero-Alloc</text>
-    </g>
-  </g>
-
-  <!-- Right Geometric Decorative Motif -->
-  <g transform="translate(1080, 150)" opacity="0.75">
-    <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="none" stroke="url(#borderGrad)" stroke-width="2"/>
-    <polygon points="0,-40 34.6,-20 34.6,20 0,40 -34.6,20 -34.6,-20" fill="none" stroke="#00d2ff" stroke-width="1" opacity="0.5"/>
-    <circle cx="0" cy="0" r="6" fill="#00d2ff"/>
-  </g>
-
-  <!-- Outer Rounded Border Line -->
-  <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="1" opacity="0.6"/>
+  <!-- Crisp Outer Hairline Border -->
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="1"/>
 </svg>
